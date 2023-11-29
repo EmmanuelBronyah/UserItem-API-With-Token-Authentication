@@ -26,30 +26,35 @@ It provides endpoints for user management, item creation, and retrieval.
 
 1. Clone the repository:
 
-   ```shell
-   git clone https://github.com/EmmanuelBronyah/UserItem-API-With-Token-Authentication.git
-   ```
+```shell
+git clone https://github.com/EmmanuelBronyah/UserItem-API-With-Token-Authentication.git
+```
 2. **Navigate to the project directory.**
+   
 ```shell
 cd userItemAPI-with-token-authentication
 ```
 3. Install dependencies.
-   ```shell
-   pip install -r requirements.txt
-   ```
-4. Set up the database.
-   ```shell
-   # Ensure PostgreSQL is running
-   # Update database URL
-   alembic upgrade head
-   ```
-5. **Run the program.**
+   
+```shell
+pip install -r requirements.txt
+```
+5. Set up the database.
+   
+```shell
+# Ensure PostgreSQL is running
+# Update database URL
+alembic upgrade head
+```
+6. **Run the program.**
+   
 ```shell
 python main.py
 ```
 
 ## Usage
 1. Run the FASTAPI application.
+   
 ```shell
 uvicorn main:app --reload
 ```
