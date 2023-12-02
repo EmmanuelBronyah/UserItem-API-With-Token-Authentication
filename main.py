@@ -33,10 +33,10 @@ partial_func_get_current_user = partial(crud.get_current_user, db=Depends(get_db
 async def home():
     content = (
         "To create a user: /create-user/ \n"
-        "To get a user: /get-user/{user_id}/ \n"
+        "To get a user: /get-user/:userId/ \n"
         "To get users: /get-users/ \n"
         "To create an item: /create-item/ \n"
-        "To get an item: /get-item/{item_id}/ \n"
+        "To get an item: /get-item/:itemId/ \n"
         "To get items: /get-items/ \n"
         "To get access token: /token/"
     )
