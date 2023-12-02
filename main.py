@@ -7,6 +7,7 @@ from functools import partial
 from datetime import timedelta
 from sqlalchemy.orm import Session
 from database import SessionLocal, engine
+from fastapi.responses import PlainTextResponse
 from fastapi.security import OAuth2PasswordRequestForm
 from fastapi import FastAPI, Depends, HTTPException, status
 
@@ -26,6 +27,20 @@ def get_db():
 # modifies the get_current_user function where the db parameter is fixed
 # on the result of the get_db function.
 partial_func_get_current_user = partial(crud.get_current_user, db=Depends(get_db))
+
+
+@app.get('/')
+async def home():
+    content = (
+        "To create a user: /create-user/ \n"
+        "To get a user: /get-user/{user_id}/ \n"
+        "To get users: /get-users/ \n"
+        "To create an item: /create-item/ \n"
+        "To get an item: /get-item/{item_id}/ \n"
+        "To get items: /get-items/ \n"
+        "To get access token: /token/"
+    )
+    return PlainTextResponse(content=content, media_type="text/plain")
 
 
 @app.post('/create-user/', response_model=schema.User)
