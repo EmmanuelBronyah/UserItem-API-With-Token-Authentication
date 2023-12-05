@@ -8,6 +8,7 @@ It provides endpoints for user management, item creation, and retrieval.
 - User registration and authentication.
 - Token-based authentication for secure API access.
 - CRUD operations for managing items.
+- Hosted at https://useritem-api-with-token-authentication.onrender.com
 
 ## Technologies Used
 

@@ -32,6 +32,7 @@ partial_func_get_current_user = partial(crud.get_current_user, db=Depends(get_db
 @app.get('/')
 async def home():
     content = (
+        "Explore and test API using Swagger: /docs \n"
         "To create a user: /create-user/ \n"
         "To get a user: /get-user/:userId/ \n"
         "To get users: /get-users/ \n"
